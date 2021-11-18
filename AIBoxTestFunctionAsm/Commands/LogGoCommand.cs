@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Diagnostics;
+using System.IO;
 
 namespace AIBoxTestFunctionAsm.Commands {
     public class LogGoCommand : ICommand {
@@ -31,7 +32,12 @@ namespace AIBoxTestFunctionAsm.Commands {
         public void Execute(object parameter) {
             bool r = false;
             switch (r) {
-                case var a when _lvm.LM.isLog: { break; }
+                case var a when _lvm.LM.isLog: {
+                        string dir_log = AppDomain.CurrentDomain.BaseDirectory + "Log";
+                        if (Directory.Exists(dir_log) == false) Directory.CreateDirectory(dir_log);
+                        Process.Start(dir_log);
+                        break;
+                    }
                 case var b when _lvm.LM.isSetting: { Process.Start(AppDomain.CurrentDomain.BaseDirectory + "setting.xml"); break; }
                 case var c when _lvm.LM.isSoftware: { Process.Start(AppDomain.CurrentDomain.BaseDirectory + "main.xml"); break; }
             }

@@ -12,7 +12,7 @@
   <dhcpServerStartIP>192.168.1.2</dhcpServerStartIP>
   <isLogin>true</isLogin>
   <isCheckMac>true</isCheckMac>
-  <isCheckFw>true</isCheckFw>
+  <isCheckFw>false</isCheckFw>
   <isCheckLAN1>true</isCheckLAN1>
   <isCheckLAN2>true</isCheckLAN2>
   <isCheckUSB1>true</isCheckUSB1>

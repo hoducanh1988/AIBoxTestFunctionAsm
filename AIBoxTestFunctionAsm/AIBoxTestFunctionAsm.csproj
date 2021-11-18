@@ -77,11 +77,14 @@
     <Compile Include="Asset\IO\AccountHelper.cs" />
     <Compile Include="Asset\IO\DhcpHelper.cs" />
     <Compile Include="Asset\IO\DutHelper.cs" />
+    <Compile Include="Asset\IO\LogHelper.cs" />
     <Compile Include="Asset\Protocol\IProtocol.cs" />
     <Compile Include="Asset\Protocol\Ssh.cs" />
     <Compile Include="Asset\Protocol\Telnet.cs" />
     <Compile Include="Commands\LogGoCommand.cs" />
     <Compile Include="Commands\LoginGoCommand.cs" />
+    <Compile Include="Commands\RunConfirmButtonCommand.cs" />
+    <Compile Include="Commands\RunConfirmHDMICommand.cs" />
     <Compile Include="Commands\RunInputBarcodeCommand.cs" />
     <Compile Include="Commands\SettingSaveCommand.cs" />
     <Compile Include="Models\AboutModel.cs" />

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace AIBoxTestFunctionAsm.Views {
     /// <summary>
@@ -22,6 +23,18 @@ namespace AIBoxTestFunctionAsm.Views {
         public LogView() {
             InitializeComponent();
             this.DataContext = myGlobal.runviewmodel;
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(500);
+            timer.Tick += (s, e) => {
+                var rm = myGlobal.runviewmodel.RN;
+                if (rm.totalResult.Equals("Waiting...")) {
+                    this.scr_dut.ScrollToEnd();
+                    this.scr_system.ScrollToEnd();
+                    this.scr_dhcp.ScrollToEnd();
+                }
+            };
+            timer.Start();
         }
     }
 }

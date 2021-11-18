@@ -27,6 +27,7 @@ namespace AIBoxTestFunctionAsm.Views {
         SettingView stv = new SettingView();
         QueryView qrv = new QueryView();
         HelpView hpv = new HelpView();
+        LoginView liv = new LoginView();
         AboutView abv = new AboutView();
         public bool isBreak = false;
 
@@ -45,6 +46,7 @@ namespace AIBoxTestFunctionAsm.Views {
                 mcvm.MCM.Init();
                 this.grid_content.Children.Clear();
                 isBreak = true;
+                myGlobal.runviewmodel.RN.isLogin = false;
 
                 switch (control_tag) {
                     case "run": {
@@ -54,7 +56,22 @@ namespace AIBoxTestFunctionAsm.Views {
                         }
                     case "setting": {
                             mcvm.MCM.isSetting = true;
-                            this.grid_content.Children.Add(stv);
+                            isBreak = false;
+                            liv.lvm.LM.Clear();
+                            this.grid_content.Children.Add(liv);
+                            Thread t = new Thread(new ThreadStart(() => {
+                            RE:
+                                Thread.Sleep(100);
+                                if (myGlobal.runviewmodel.RN.isLogin == true) {
+                                    App.Current.Dispatcher.Invoke(new Action(() => { this.grid_content.Children.Add(stv); }));
+                                }
+                                else {
+                                    if (isBreak == false) goto RE;
+                                }
+
+                            }));
+                            t.IsBackground = true;
+                            t.Start();
                             break; 
                         }
                     case "log": {

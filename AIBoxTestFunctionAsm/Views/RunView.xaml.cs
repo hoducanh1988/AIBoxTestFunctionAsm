@@ -25,9 +25,12 @@ namespace AIBoxTestFunctionAsm.Views {
             this.DataContext = myGlobal.runviewmodel;
 
             DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Interval = TimeSpan.FromMilliseconds(500);
             int old_value = -1;
             timer.Tick += (s, e) => {
+                if (myGlobal.runviewmodel.RN.totalResult != "Waiting...") {
+                    this.txtInput.Focus();
+                }
                 if (old_value == myGlobal.runviewmodel.RN.showIndex) return;
                 old_value = myGlobal.runviewmodel.RN.showIndex;
                 switch (myGlobal.runviewmodel.RN.showIndex) {

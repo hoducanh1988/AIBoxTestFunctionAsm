@@ -80,7 +80,7 @@
 
         <StackPanel>
             <Label FontWeight="SemiBold" FontSize="{StaticResource fontSizeNormal}" Content="Nhập mac sản phẩm:"/>
-            <TextBox Style="{StaticResource textbox_input}" Text="{Binding Path=RN.inputBarcode, UpdateSourceTrigger=PropertyChanged}">
+            <TextBox x:Name="txtInput" Style="{StaticResource textbox_input}" Text="{Binding Path=RN.inputBarcode, UpdateSourceTrigger=PropertyChanged}">
                 <TextBox.InputBindings>
                     <KeyBinding Key="Enter" Command="{Binding InputCommand}" />
                 </TextBox.InputBindings>
@@ -256,8 +256,7 @@
                 <Label Style="{StaticResource label_result}" Content="{Binding Path=RN.checkPowerButtonResult, UpdateSourceTrigger=PropertyChanged}"/>
                 <Label Style="{StaticResource label_time}" Content="{Binding Path=RN.checkPowerButtonTime, UpdateSourceTrigger=PropertyChanged}"/>
             </WrapPanel>
-            
-            
+
             <WrapPanel>
                 <Label FontSize="{StaticResource fontSizeNormal}" Content="MAC:"/>
                 <Label FontSize="{StaticResource fontSizeHeader}" FontWeight="SemiBold" Content="{Binding Path=RN.macStamp, UpdateSourceTrigger=PropertyChanged}"/>

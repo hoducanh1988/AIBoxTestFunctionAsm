@@ -31,27 +31,37 @@ namespace AIBoxTestFunctionAsm.Models {
             checkUsb1Result = checkUsb1Time = "-";
             checkUsb2Result = checkUsb2Time = "-";
             checkSDCardResult = checkSDCardTime = "-";
+
             checkHdmiResult = checkHdmiTime = "-";
+            hdmiTimeout = 30;
+            hdmiIdResult = -1;
+
             checkPowerButtonResult = checkPowerButtonTime = "-";
-            inputBarcode = macDut = macStamp = "";
+            buttonTimeout = 30;
+            buttonIdResult = -1;
+
+            macDut = macStamp = "";
             totalTime = "00:00:00";
             totalResult = "-";
-            logDut = logSystem = "";
+            logDut = logSystem = logDhcp = "";
             showIndex = 0;
         }
 
         public void Wait() {
+            macStamp = inputBarcode;
             allowInput = false;
             totalResult = "Waiting...";
         }
 
         public bool Passed() {
             allowInput = true;
+            inputBarcode = "";
             totalResult = "Passed";
             return true;
         }
 
         public bool Failed() {
+            inputBarcode = "";
             allowInput = true;
             totalResult = "Failed";
             return false;
@@ -215,6 +225,22 @@ namespace AIBoxTestFunctionAsm.Models {
             get { return _check_hdmi_time; }
             set { _check_hdmi_time = value; OnPropertyChanged(nameof(checkHdmiTime)); }
         }
+        int _hdmi_time_out;
+        public int hdmiTimeout {
+            get { return _hdmi_time_out; }
+            set {
+                _hdmi_time_out = value;
+                OnPropertyChanged(nameof(hdmiTimeout));
+            }
+        }
+        int _hdmi_id_result;
+        public int hdmiIdResult {
+            get { return _hdmi_id_result; }
+            set {
+                _hdmi_id_result = value;
+                OnPropertyChanged(nameof(hdmiIdResult));
+            }
+        }
 
         #endregion
 
@@ -230,7 +256,22 @@ namespace AIBoxTestFunctionAsm.Models {
             get { return _check_power_button_time; }
             set { _check_power_button_time = value; OnPropertyChanged(nameof(checkPowerButtonTime)); }
         }
-
+        int _button_time_out;
+        public int buttonTimeout {
+            get { return _button_time_out; }
+            set {
+                _button_time_out = value;
+                OnPropertyChanged(nameof(buttonTimeout));
+            }
+        }
+        int _button_id_result;
+        public int buttonIdResult {
+            get { return _button_id_result; }
+            set {
+                _button_id_result = value;
+                OnPropertyChanged(nameof(buttonIdResult));
+            }
+        }
         #endregion
 
         #region result

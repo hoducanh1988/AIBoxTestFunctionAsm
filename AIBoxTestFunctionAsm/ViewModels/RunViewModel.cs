@@ -15,6 +15,8 @@ namespace AIBoxTestFunctionAsm.ViewModels {
             _run = new RunModel();
             _sm = myGlobal.settingviewmodel.SM;
             InputCommand = new RunInputBarcodeCommand(this);
+            HDMIConfirmCommand = new RunConfirmHDMICommand(this);
+            ButtonConfirmCommand = new RunConfirmButtonCommand(this);
         }
 
         RunModel _run;
@@ -26,6 +28,14 @@ namespace AIBoxTestFunctionAsm.ViewModels {
             get => _sm;
         }
         public ICommand InputCommand {
+            get;
+            private set;
+        }
+        public ICommand HDMIConfirmCommand {
+            get;
+            private set;
+        }
+        public ICommand ButtonConfirmCommand {
             get;
             private set;
         }

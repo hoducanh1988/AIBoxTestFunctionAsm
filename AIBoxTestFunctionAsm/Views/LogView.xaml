@@ -47,28 +47,26 @@
             <TabItem.Header>
                 <Label Width="100" FontSize="15" HorizontalContentAlignment="Center" Content="LOG SYSTEM"/>
             </TabItem.Header>
-
             <ScrollViewer x:Name="scr_system">
                 <RichTextBox IsReadOnly="True" TextBlock.LineHeight="1" FontSize="{StaticResource fontSizeNormal}" FontWeight="Normal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                     <FlowDocument>
                         <Paragraph Padding="10,10,10,10">
-                            <Run FontSize="15" FontWeight="Normal" Text="{Binding Path=RN.logSystem,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                            <Run FontSize="13" FontWeight="Normal" Text="{Binding Path=RN.logSystem,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
                         </Paragraph>
                     </FlowDocument>
                 </RichTextBox>
             </ScrollViewer>
         </TabItem>
-        
+
         <TabItem>
             <TabItem.Header>
                 <Label Width="100" FontSize="15" HorizontalContentAlignment="Center" Content="LOG DUT"/>
             </TabItem.Header>
-
             <ScrollViewer x:Name="scr_dut">
                 <RichTextBox IsReadOnly="True" TextBlock.LineHeight="1" FontSize="{StaticResource fontSizeNormal}" FontWeight="Normal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                     <FlowDocument>
                         <Paragraph Padding="10,10,10,10">
-                            <Run FontSize="15" FontWeight="Normal" Text="{Binding Path=RN.logDut,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                            <Run FontSize="13" FontWeight="Normal" Text="{Binding Path=RN.logDut,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
                         </Paragraph>
                     </FlowDocument>
                 </RichTextBox>
@@ -79,12 +77,11 @@
             <TabItem.Header>
                 <Label Width="100" FontSize="15" HorizontalContentAlignment="Center" Content="LOG DHCP"/>
             </TabItem.Header>
-
             <ScrollViewer x:Name="scr_dhcp">
                 <RichTextBox IsReadOnly="True" TextBlock.LineHeight="1" FontSize="{StaticResource fontSizeNormal}" FontWeight="Normal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                     <FlowDocument>
                         <Paragraph Padding="10,10,10,10">
-                            <Run FontSize="15" FontWeight="Normal" Text="{Binding Path=RN.logDhcp,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                            <Run FontSize="13" FontWeight="Normal" Text="{Binding Path=RN.logDhcp,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
                         </Paragraph>
                     </FlowDocument>
                 </RichTextBox>
