@@ -1,0 +1,7 @@
+﻿<MainHeaderModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <productName>AIBOX</productName>
+  <stationName>Test Function ASM</stationName>
+  <Version>AIBOXXVN0U0001</Version>
+  <buildTime>16/11/2021 10:00</buildTime>
+  <copyRight>VNPT Technology 2021</copyRight>
+</MainHeaderModel>

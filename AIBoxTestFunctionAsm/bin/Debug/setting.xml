@@ -1,0 +1,24 @@
+﻿<SettingModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <dutProtocol>SSH</dutProtocol>
+  <dutUser>eVISION-E01</dutUser>
+  <dutPassword>vnpttech</dutPassword>
+  <dutFwVersion>153.001.01</dutFwVersion>
+  <dutLAN1Speed>1000</dutLAN1Speed>
+  <dutLAN2Speed>1000</dutLAN2Speed>
+  <dhcpServerIP>192.168.1.1</dhcpServerIP>
+  <dhcpServerProtocol>Telnet</dhcpServerProtocol>
+  <dhcpServerUser>admin</dhcpServerUser>
+  <dhcpServerPassword>VnT3ch@dm1n</dhcpServerPassword>
+  <dhcpServerStartIP>192.168.1.2</dhcpServerStartIP>
+  <isLogin>true</isLogin>
+  <isCheckMac>true</isCheckMac>
+  <isCheckFw>true</isCheckFw>
+  <isCheckLAN1>true</isCheckLAN1>
+  <isCheckLAN2>true</isCheckLAN2>
+  <isCheckUSB1>true</isCheckUSB1>
+  <isCheckUSB2>true</isCheckUSB2>
+  <isCheckSDCard>true</isCheckSDCard>
+  <isCheckHDMI>true</isCheckHDMI>
+  <isCheckLED>true</isCheckLED>
+  <isCheckPowerButton>true</isCheckPowerButton>
+</SettingModel>
