@@ -44,3 +44,4 @@ G:\Backup_Tool_Test\repos\10. AIBox\AIBoxTestFunctionAsm\AIBoxTestFunctionAsm\ob
 G:\Backup_Tool_Test\repos\10. AIBox\AIBoxTestFunctionAsm\AIBoxTestFunctionAsm\obj\Debug\Views\HDMIView.baml
 G:\Backup_Tool_Test\repos\10. AIBox\AIBoxTestFunctionAsm\AIBoxTestFunctionAsm\obj\Debug\Views\LoginView.g.cs
 G:\Backup_Tool_Test\repos\10. AIBox\AIBoxTestFunctionAsm\AIBoxTestFunctionAsm\obj\Debug\Views\LoginView.baml
+G:\Backup_Tool_Test\repos\10. AIBox\AIBoxTestFunctionAsm\AIBoxTestFunctionAsm\obj\Debug\AIBoxTestFunctionAsm.csprojAssemblyReference.cache

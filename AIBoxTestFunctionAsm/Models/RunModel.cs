@@ -21,6 +21,7 @@ namespace AIBoxTestFunctionAsm.Models {
 
         #region method
 
+
         public void Init_Value() {
             allowInput = true;
             loginResult = loginTime = "-";
